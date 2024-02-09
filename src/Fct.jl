@@ -21,15 +21,13 @@ function fct!(dct_in::AbstractVector, #input
               ifft_work::AbstractVector, #workspace: ifft workspace
               N=length(dct_in)-1)
     ifft_in[1] = dct_in[1]
-    i,j = 2,2N
-    while i<=N
-        z = dct_in[i]
-        ifft_in[i] = z
-        ifft_in[j] = z
-        i+=1
-        j-=1
+    for i in 2:N
+        ifft_in[i] = dct_in[i]
     end
     ifft_in[N+1] = dct_in[N+1]
+    for i in 1:N-1
+        ifft_in[N+1+i] = dct_in[N+1-i]
+    end
     ifft!(ifft_in,ifft_out,ifft_work,2N)
     dct_out = view(ifft_out,1:N+1)
     dct_out .*= 0.5
@@ -107,7 +105,6 @@ function ifft_helper!(x::AbstractVector,
         j+=doublestride
         k+=1
     end
-    #println()
     i=1+offset
     k=1
     while k<=len

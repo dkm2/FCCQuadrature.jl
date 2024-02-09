@@ -24,7 +24,7 @@ involving QR decomposition (method=:qr) with pivoting
 to solve the recurrence relations with the true boundary condition
 for I_0 the false boundary condition I_{N+P}=0.
 (QR w/o pivoting and LU, even with pivoting, 
-are not inaccurate for some choices of w.)
+are not accurate for some choices of w.)
 =#
 function getweights(N::Integer,w::Real,method::Symbol=:thomas,T::Type=Float64)::Vector
     out,work,paddedN=weights_alloc(N,method,T)

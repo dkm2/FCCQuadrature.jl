@@ -50,14 +50,14 @@ Specify a FCC quadrature variant with the `method` keyword argument.
   starting at `minlog2degree` (default: 3) and adaptively increasing
   but not beyond `localmaxlog2degree` (default: 6).
   If a subinterval's accuracy goals are not met even with the maximum degree,
-  then the subinterval is divided into `branching`-many equal subintervals.
+  then the subinterval is divided into `branching`-many equal subintervals
   (default: 4).
 
 * Methods `:tone` and `:chirp` use automatic differentiation
   to factor out a per-subinterval tone or chirp (respectively)
   before the polynomial interpolation step. To use these methods,
-  the function $g$ must be generic enough to take input
-  of type `FCCQuad.Jets.Jet{real(T)}`, which is a subtype of `Number`.
+  the function $g$ must have a generic implementation that accepts
+  an input whose type is an arbitrary `Number` subtype.
 
 Method | Supported Working Precisions
 --- | ---

@@ -50,7 +50,7 @@ function Jet(x::T1,y::T2,z::T3) where {T1<:Number,T2<:Number,T3<:Number}
 end
 
 convert(::Type{Jet},x::Standard)=Jet(x)
-convert(::Type{Jet{T}},x::Standard) where T<:Number = Jet(convert(T,x)) 
+convert(::Type{Jet{T}},x::Standard) where T<:Number = Jet(convert(T,x))
 convert(T::Type{<:Standard},x::Jet)=convert(T,x.a)
 
 promote_rule(::Type{Jet{T1}}, ::Type{T2}) where {T1<:Number,T2<:Standard} = Jet{promote_type(T1,T2)}
@@ -113,7 +113,7 @@ function inv(y::Jet)
   xa=inv(y.a)
   xb=-xa*xa*y.b
   xc=-xa*(xa*y.c + xb*y.b)
-  Jet(xa,xb,xc)  
+  Jet(xa,xb,xc)
 end
 
 function (/)(z::Standard,y::Jet)
@@ -121,7 +121,7 @@ function (/)(z::Standard,y::Jet)
   xa=r*z
   xb=-r*xa*y.b
   xc=-r*(xa*y.c + xb*y.b)
-  Jet(xa,xb,xc)  
+  Jet(xa,xb,xc)
 end
 
 #f(a+e)=f(a)+ef'(a)+e^2f''(a)/2
