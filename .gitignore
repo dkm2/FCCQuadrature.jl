@@ -5,3 +5,5 @@
 *.log
 *.pdf
 .ipynb_checkpoints
+.DS_Store
+Manifest.toml
