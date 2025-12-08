@@ -9,7 +9,26 @@ import Base: convert, promote_rule, +, -, *, /, inv, cos, sin, tan, cot, sec, cs
 const erfinf=2/sqrt(pi)
 const ierfinf=sqrt(pi)/2
 
-#a+be+ce^2 with e^3=0
+"""
+    Jet{T<:Number} <: Number
+
+Second-degree Taylor polynomial for forward-mode automatic differentiation.
+
+Represents `a + b*ε + c*ε²` where `ε³ = 0`.
+
+# Fields
+- `a::T`: value at evaluation point
+- `b::T`: first derivative coefficient
+- `c::T`: second derivative coefficient divided by 2
+
+# Example
+```julia
+julia> f(x) = sin(x)
+julia> j = f(FCCQuad.Jets.Jet(0.0, 1.0))  # evaluate at x=0 with dx=1
+julia> j.a  # f(0) = 0
+julia> j.b  # f'(0) = 1
+```
+"""
 struct Jet{T<:Number} <: Number
   a::T
   b::T
