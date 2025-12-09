@@ -1,5 +1,5 @@
 """
-    FCCQuad
+    FCCQuadrature
 
 Compute finite Fourier integrals using Filon-Clenshaw-Curtis (FCC) quadrature.
 
@@ -8,7 +8,7 @@ Provide adaptive quadrature methods for oscillatory integrals of the form
 
 See also the preprint: [Filon-Clenshaw-Curtis Quadrature with Automatic Tone Removal](https://dkmj.org/academic/numfour.pdf)
 """
-module FCCQuad
+module FCCQuadrature
 export fccquad, fccquad_cc, fccquad_cs, fccquad_sc, fccquad_ss
 
 include("Fct.jl")
@@ -330,7 +330,7 @@ Dictionary mapping method symbols to supported complex types.
 
 # Example
 ```julia
-julia> FCCQuad.supported_types[:tone]
+julia> FCCQuadrature.supported_types[:tone]
 (ComplexF32, ComplexF64, Complex{BigFloat})
 ```
 """
@@ -388,7 +388,7 @@ for all `w` in `freqs`, using Filon-Clenshaw-Curtis (FCC) quadrature.
 Methods `:tone` and `:chirp` use automatic differentiation to factor out a per-subinterval
 tone or chirp (respectively) from `oscillator` before the polynomial interpolation step.
 To use these methods, `oscillator` must be generic enough to accept input of type
-[`FCCQuad.Jets.Jet`](@ref FCCQuad.Jets.Jet)`{real(T)}`, which is a subtype of `Number`.
+[`FCCQuadrature.Jets.Jet`](@ref FCCQuadrature.Jets.Jet)`{real(T)}`, which is a subtype of `Number`.
 
 # Returns
 A tuple `(results, function_evaluation_count)` where `results` is a 2×L complex matrix:
@@ -400,7 +400,7 @@ A tuple `(results, function_evaluation_count)` where `results` is a 2×L complex
 - `:plain`, `:tone`: `Complex{Float32}`, `Complex{Float64}`, `Complex{BigFloat}`
 - `:chirp`: `Complex{Float64}`
 
-See [`FCCQuad.supported_types`](@ref supported_types) for programmatic access.
+See [`FCCQuadrature.supported_types`](@ref supported_types) for programmatic access.
 
 See also [`fccquad_cc`](@ref), [`fccquad_cs`](@ref), [`fccquad_sc`](@ref), [`fccquad_ss`](@ref).
 """

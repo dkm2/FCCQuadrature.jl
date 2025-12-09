@@ -1,4 +1,4 @@
-using FCCQuad: Fct, Cheb, getweights, fccquad_cc, fccquad_cs, fccquad_sc, fccquad_ss, all_methods, supported_types, interval_methods
+using FCCQuadrature: Fct, Cheb, getweights, fccquad_cc, fccquad_cs, fccquad_sc, fccquad_ss, all_methods, supported_types, interval_methods
 using QuadGK, Test
 
 #=

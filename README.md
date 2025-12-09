@@ -1,9 +1,9 @@
-# FCCQuad.jl
+# FCCQuadrature.jl
 
 [![CI](https://github.com/dkm2/FCCQuad.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/dkm2/FCCQuad.jl/actions/workflows/CI.yml)
 [![Documentation](https://img.shields.io/badge/docs-dev-blue.svg)](https://dkm2.github.io/FCCQuad.jl/dev/)
 
-`FCCQuad.jl` is a Julia implementation of variants of Filon-Clenshaw-Curtis (FCC) quadrature.
+`FCCQuadrature.jl` is a Julia implementation of variants of Filon-Clenshaw-Curtis (FCC) quadrature.
 
 ## Complex finite Fourier integrals
 

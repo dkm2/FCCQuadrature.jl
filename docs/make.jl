@@ -1,10 +1,10 @@
 using Documenter
-using FCCQuad
+using FCCQuadrature
 
 makedocs(
-    sitename = "FCCQuad.jl",
+    sitename = "FCCQuadrature.jl",
     authors = "David Milovich (@dkm2) and contributors",
-    modules = [FCCQuad, FCCQuad.Jets],
+    modules = [FCCQuadrature, FCCQuadrature.Jets],
     pages = [
         "Home" => "index.md",
         "API Reference" => "api.md",

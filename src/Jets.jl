@@ -24,7 +24,7 @@ Represents `a + b*ε + c*ε²` where `ε³ = 0`.
 # Example
 ```julia
 julia> f(x) = sin(x)
-julia> j = f(FCCQuad.Jets.Jet(0.0, 1.0))  # evaluate at x=0 with dx=1
+julia> j = f(FCCQuadrature.Jets.Jet(0.0, 1.0))  # evaluate at x=0 with dx=1
 julia> j.a  # f(0) = 0
 julia> j.b  # f'(0) = 1
 ```

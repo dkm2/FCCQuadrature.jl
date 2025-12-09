@@ -3,7 +3,7 @@
 ## Module
 
 ```@docs
-FCCQuad
+FCCQuadrature
 ```
 
 ## Functions
@@ -19,14 +19,14 @@ fccquad_ss
 ## Constants
 
 ```@docs
-FCCQuad.all_methods
-FCCQuad.interval_methods
-FCCQuad.supported_types
-FCCQuad.default_reltol
+FCCQuadrature.all_methods
+FCCQuadrature.interval_methods
+FCCQuadrature.supported_types
+FCCQuadrature.default_reltol
 ```
 
 ## Types
 
 ```@docs
-FCCQuad.Jets.Jet{T} where T
+FCCQuadrature.Jets.Jet{T} where T
 ```

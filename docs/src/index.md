@@ -1,4 +1,4 @@
-# FCCQuad.jl
+# FCCQuadrature.jl
 
 Filon-Clenshaw-Curtis (FCC) quadrature for oscillatory integrals.
 
@@ -12,7 +12,7 @@ Pkg.add(url="https://github.com/dkm2/FCCQuad.jl")
 ## Quick Start
 
 ```julia
-using FCCQuad
+using FCCQuadrature
 
 # Complex finite Fourier integral
 f(x) = exp(-x^2)
