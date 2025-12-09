@@ -12,6 +12,6 @@ makedocs(
 )
 
 deploydocs(
-    repo = "github.com/dkm2/FCCQuad.jl.git",
+    repo = "github.com/dkm2/FCCQuadrature.jl.git",
     devbranch = "master",
 )
