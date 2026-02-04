@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: "FCCQuadrature.jl"
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+abstract: >-
+  FCCQuadrature.jl is a Julia package is a Julia implementation of variants
+  of Filon-Clenshaw-Curtis (FCC) quadrature for computing finite
+  one-dimensional complex and real Fourier integrals.
+  Variants includes degree-subinterval hybrid adaptive integration
+  with tone removal via automatic differentiation.
+authors:
+  - family-names: Milovich
+    given-names: David
+repository-code: https://github.com/dkm2/FCCQuadrature.jl
+url: https://github.com/dkm2/FCCQuadrature.jl
+license: MIT
+keywords:
+  - numerical integration
+  - oscillatory integrals
+  - Clenshaw-Curtis quadrature
+  - Chebyshev polynomials
+  - Julia
+  - automatic differentiation
+preferred-citation:
+  type: article
+  title: "Filon-Clenshaw-Curtis Quadrature with Automatic Tone Removal"
+  authors:
+    - family-names: Milovich
+      given-names: David
+  doi: 10.21203/rs.3.rs-1743309/v2
+  url: https://doi.org/10.21203/rs.3.rs-1743309/v2
+  year: 2022
