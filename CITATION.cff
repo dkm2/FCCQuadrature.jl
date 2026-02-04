@@ -5,11 +5,11 @@ message: >-
   metadata from this file.
 type: software
 abstract: >-
-  FCCQuadrature.jl is a Julia package is a Julia implementation of variants
+  FCCQuadrature.jl is a Julia implementation of variants
   of Filon-Clenshaw-Curtis (FCC) quadrature for computing finite
   one-dimensional complex and real Fourier integrals.
-  Variants includes degree-subinterval hybrid adaptive integration
-  with tone removal via automatic differentiation.
+  Variants include degree-subinterval hybrid adaptive integration
+  with automatic tone removal using automatic differentiation.
 authors:
   - family-names: Milovich
     given-names: David
